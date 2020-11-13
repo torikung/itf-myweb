@@ -34,7 +34,7 @@ while($Result = mysqli_fetch_array($res))
 <?php
 mysqli_close($conn);
 ?>
-<form action="insert.php" method="POST"
+<form action="form.html" method="POST"
     <p>
         <input type="submit" name="submit" value="hi">
     </p>
