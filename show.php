@@ -25,13 +25,8 @@ while($Result = mysqli_fetch_array($res))
   <tr>
     <td><?php echo $Result['name'];?></div></td>
     <td><?php echo $Result['comment'];?></td>
-    <p>
-        <input type="submit" name="submit" value="del">
-    </p>
-    <p>
-        <input type="submit" name="submit" value="fix">
-    </p>
-    </form>
+    <input type="submit" name="submit" value="del">
+    <input type="submit" name="submit" value="fix">
 </form>
   </tr>
 <?php
