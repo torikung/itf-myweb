@@ -24,11 +24,11 @@ $res = mysqli_query($conn, 'SELECT * FROM guestbook');
         <table class="table table-sm table-dark table-striped table-bordered">
             <thead>
                 <tr>
-                    <th width="100"> <div align="center" class="p-3 mb-2 bg-primary text-white">Name</div></th>
-                    <th width="300"> <div align="center" class="p-3 mb-2 bg-primary text-white">Comment</div></th>
-                    <th width="150"> <div align="center" class="p-3 mb-2 bg-primary text-white">Link</div></th>
-                    <th width="10%"> <div align="center" class="p-3 mb-2 bg-primary text-white">Edit</div></th>
-                    <th width="10%"> <div align="center" class="p-3 mb-2 bg-primary text-white">Delete</div></th>
+                    <th width="100"> <div align="center" class="bg-primary text-white">Name</div></th>
+                    <th width="300"> <div align="center" class="bg-primary text-white">Comment</div></th>
+                    <th width="150"> <div align="center" class="bg-primary text-white">Link</div></th>
+                    <th width="10%"> <div align="center" class="bg-primary text-white">Edit</div></th>
+                    <th width="10%"> <div align="center" class="bg-primary text-white">Delete</div></th>
                 </tr>
             </thead>
     <?php
