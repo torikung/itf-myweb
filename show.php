@@ -57,7 +57,7 @@ $res = mysqli_query($conn, 'SELECT * FROM guestbook');
 <div class="container">
     <form action="form.html" method="POST"
     <p>
-        <div align="center"><input type="submit" name="submit" value="เพิ่ม"></div>
+        <div align="center"><input type="submit" class="btn btn-dark" name="submit" value="เพิ่ม"></div>
     </p>
     </form>
 </div>
