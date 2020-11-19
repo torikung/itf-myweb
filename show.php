@@ -24,11 +24,11 @@
         <table class="table table-dark table-striped table-bordered">
             <thead>
                 <tr>
-                    <th width="100"> <div align="center" class="text-secondary">Name</div></th>
-                    <th width="300"> <div align="center" class="text-secondary">Comment</div></th>
-                    <th width="150"> <div align="center" class="text-secondary">Link</div></th>
-                    <th width="10%"> <div align="center" class="text-secondary">Edit</div></th>
-                    <th width="10%"> <div align="center" class="text-secondary">Delete</div></th>
+                    <th width="100"> <div align="center" class="p-3 mb-2 bg-info text-white">Name</div></th>
+                    <th width="300"> <div align="center" class="p-3 mb-2 bg-info text-white">Comment</div></th>
+                    <th width="150"> <div align="center" class="p-3 mb-2 bg-info text-white">Link</div></th>
+                    <th width="10%"> <div align="center" class="p-3 mb-2 bg-info text-white">Edit</div></th>
+                    <th width="10%"> <div align="center" class="p-3 mb-2 bg-info text-white">Delete</div></th>
                 </tr>
             </thead>
     <?php
