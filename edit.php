@@ -7,11 +7,11 @@ if (mysqli_connect_errno($conn))
     die('Failed to connect to MySQL: '.mysqli_connect_error());
 }
 
-$ID = $_POST['id'];
+$id = $_POST['id'];
 $name = $_POST['name'];
 $text = $_POST['comment'];
 $link = $_POST['link'];
-$sql = "UPDATE guestbook SET name='$name', comment='$text', link='$link' WHERE ID='$ID'";
+$sql = "UPDATE guestbook SET name='$name', comment='$text', link='$link' WHERE id='$id'";
 
 if (mysqli_query($conn, $sql)) {
     echo "Record Update Successfully";
