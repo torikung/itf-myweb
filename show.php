@@ -10,7 +10,7 @@
     <style>
         body { 
             background-color: white; 
-            background-image: url('https://wallpaperaccess.com/full/31367.jpg'); 
+            background-image: url('https://wallpaperstock.net/old-style-gradient_wallpapers_36830_1920x1080.jpg'); 
             background-size: auto; 
             background-repeat: repeat; 
             background-attachment: scroll; 
@@ -28,7 +28,7 @@
     $res = mysqli_query($conn, 'SELECT * FROM guestbook');
 ?>
 <div class="container">
-    <div align="center" class="text-primary"><h1>DataBase Table</h1></div>
+    <div align="center" class="text-danger"><h1>DataBase Table</h1></div>
     <table width="400" border="1">
         <table class="table table-dark table-bordered">
             <thead>
