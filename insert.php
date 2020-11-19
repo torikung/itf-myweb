@@ -1,4 +1,5 @@
 <?php
+
 $conn = mysqli_init();
 mysqli_real_connect($conn, 'itfdatabest.mysql.database.azure.com', 'torikung@itfdatabest', 'itf5544!', 'itflab', 3306);
 if (mysqli_connect_errno($conn))
