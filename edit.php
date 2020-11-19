@@ -12,6 +12,7 @@ $name = $_POST['name'];
 $text = $_POST['comment'];
 $link = $_POST['link'];
 $sql = "UPDATE guestbook SET name='$name', comment='$text', link='$link' WHERE id='$id'";
+$url='/show.php';
 
 if (mysqli_query($conn, $sql)) {
     echo "Record Update Successfully";
