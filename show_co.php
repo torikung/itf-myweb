@@ -131,9 +131,9 @@ session_start();
         {
         ?>
           <tr>
-                <td align="center"><?php echo $Result['Name'];?></td>
-                <td align="center"><?php echo $Result['Comment'];?></td>
-                <td align="center"><?php echo $Result['Link'];?></td> 
+                <td align="center"><?php echo $Result['name'];?></td>
+                <td align="center"><?php echo $Result['comment'];?></td>
+                <td align="center"><?php echo $Result['link'];?></td> 
                 <td align="center">
                     <form  action="" method="post">
                         <button class="edit" type="submit" name="edit" value="<?php echo $Result['ID'];?>">แก้ไข</button>
@@ -156,11 +156,11 @@ session_start();
         ?>
         <form class="form" action="" method="post">
             <div style="opacity:0%;">.</div>
-            Name:<br>
+            name:<br>
                 <input class="in" type="text" name = "name" id="idName" placeholder="Enter Name"><br>
-            Comment:<br>
+            comment:<br>
             <textarea class="in"rows="10" cols="20" name = "comment" id="idComment" placeholder="Enter Comment"></textarea><br>
-            Link:<br>
+            link:<br>
             <input class="in" type="text" name = "link" id="idLink" placeholder="Enter Link"><br><br>
             <button class="btn" type="submit" name="commentBtn">Submit</button><br><br>
             <button class="btn2" type="submit" name="redi" value="View">View comment</button>
@@ -172,11 +172,11 @@ session_start();
             //first view <-----------------------------------------------------------------------------------------------
     ?><form class="form" action="" method="post">
             <div style="opacity:0%;">.</div>
-            Name:<br>
+            name:<br>
                 <input class="in" type="text" name = "name" id="idName" placeholder="Enter Name"><br>
-            Comment:<br>
+            comment:<br>
             <textarea class="in"rows="10" cols="20" name = "comment" id="idComment" placeholder="Enter Comment"></textarea><br>
-            Link:<br>
+            link:<br>
             <input class="in" type="text" name = "link" id="idLink" placeholder="Enter Link"><br><br>
             <button class="btn" type="submit" name="commentBtn">Submit</button><br><br>
             <button class="btn2" type="submit" name="redi" value="View">View comment</button>
@@ -189,7 +189,7 @@ session_start();
 
 <?php
 if(isset($_POST['commentBtn'])){
-    $sql = "INSERT INTO guestbook (Name , Comment , Link) VALUES ('".$_POST['name']."', '".$_POST['comment']."', '".$_POST['link']."')";
+    $sql = "INSERT INTO guestbook (name , comment , link) VALUES ('".$_POST['name']."', '".$_POST['comment']."', '".$_POST['link']."')";
     $save = $conn->query($sql);
     header("Refresh:0");
 }
@@ -203,7 +203,7 @@ if(isset($_POST['edit'])){
     header("Refresh:0");
 }
 if(isset($_POST['editBtn'])){
-    $edit = "UPDATE guestbook SET Name='".$_POST['ename']."' , Comment='".$_POST['ecomment']."' , Link='".$_POST['elink']."' WHERE id='".$_SESSION["id"]."'";
+    $edit = "UPDATE guestbook SET name='".$_POST['ename']."' , comment='".$_POST['ecomment']."' , link='".$_POST['elink']."' WHERE id='".$_SESSION["id"]."'";
     $conn->query($edit);
     unset($_SESSION["id"]);
     header("Refresh:0");
