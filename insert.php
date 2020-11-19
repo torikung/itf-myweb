@@ -1,5 +1,15 @@
 <?php
-
+<head>
+    <style>
+        body { 
+            background-color: white; 
+            background-image: url('https://wallpaperstock.net/old-style-gradient_wallpapers_36830_1920x1080.jpg'); 
+            background-size: auto; 
+            background-repeat: repeat; 
+            background-attachment: scroll; 
+        } 
+    </style>
+</head>
 $conn = mysqli_init();
 mysqli_real_connect($conn, 'itfdatabest.mysql.database.azure.com', 'torikung@itfdatabest', 'itf5544!', 'itflab', 3306);
 if (mysqli_connect_errno($conn))
