@@ -25,9 +25,13 @@ while($Result = mysqli_fetch_array($res))
   <tr>
     <td><?php echo $Result['name'];?></div></td>
     <td><?php echo $Result['comment'];?></td>
-    <td><?php <input type="submit" name="submit" value="del">
-    <input type="submit" name="submit" value="fix">;?></td>
-</form>
+    <td><?php echo $Result['Link'];?></td>
+    <td><?php 
+        <form  action="" method="post">
+            <button class="edit" type="submit" name="edit" value="<?php echo $Result['ID'];?>">แก้ไข</button>
+            <button class="del" type="submit" name="del" value="<?php echo $Result['ID'];?>">ลบออก</button>
+        </form>
+    </td>
   </tr>
 <?php
 }
@@ -38,7 +42,7 @@ mysqli_close($conn);
 ?>
 <form action="form.html" method="POST"
     <p>
-        <input type="submit" name="submit" value="hi">
+        <input type="submit" name="submit" value="เพิ่ม">
     </p>
 </form>
 </body>
