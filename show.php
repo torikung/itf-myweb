@@ -52,3 +52,15 @@ $res = mysqli_query($conn, 'SELECT * FROM guestbook');
   </tr>
 <?php
 }
+?>
+    </table>
+<div class="container">
+    <tr>
+        <div align="center"><button type="button" class="btn btn-dark" onclick="window.location.href='/form.html'">เพิ่ม</button></div>
+    </tr>
+</div>
+<?php
+mysqli_close($conn);
+?>
+</body>
+</html>
