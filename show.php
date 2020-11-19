@@ -65,5 +65,8 @@
 <?php
 mysqli_close($conn);
 ?>
+<form style ="background-image: url('https://wallpaperaccess.com/full/31367.jpg');"> 
+<input required type="text" name="name" /> 
+</form> 
 </body>
 </html>
