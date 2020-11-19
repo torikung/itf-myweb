@@ -15,6 +15,10 @@ if (mysqli_query($conn, $sql)) {
   } else {
     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
   }
+
+<?php
+<meta http-equiv="refresh" content="3;window.location.href='/show.php">;
+?>
   
 mysqli_close($conn);
 ?>
