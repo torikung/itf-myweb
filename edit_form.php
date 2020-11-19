@@ -5,6 +5,13 @@
 	.form {
   		align: center;
 	}
+        body { 
+            background-color: white; 
+            background-image: url('https://wallpaperstock.net/old-style-gradient_wallpapers_36830_1920x1080.jpg'); 
+            background-size: auto; 
+            background-repeat: repeat; 
+            background-attachment: scroll; 
+        } 
 </style>
     	<title>Edited Form</title>
 	<meta charset="utf-8">
