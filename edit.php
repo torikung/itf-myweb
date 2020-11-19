@@ -20,7 +20,7 @@ if (mysqli_query($conn, $sql)) {
     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
   }
 
-echo '<META HTTP-EQUIV=REFRESH CONTENT="3; '.$url.'">';
+echo '<META HTTP-EQUIV=REFRESH CONTENT="2; '.$url.'">';
 
 mysqli_close($conn);
 ?>
