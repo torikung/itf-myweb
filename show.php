@@ -1,6 +1,12 @@
 <html>
 <head>
-<title>ITF Lab</title>
+    <title>ITF Lab</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
 <body>
 <?php
@@ -10,72 +16,53 @@ if (mysqli_connect_errno($conn))
 {
     die('Failed to connect to MySQL: '.mysqli_connect_error());
 }
+$res = mysqli_query($conn, 'SELECT * FROM guestbook');
 ?>
-<?php 
-        if(isset($_SESSION["id"])){
-            $editt = "SELECT * FROM guestbook WHERE ID='".$_SESSION["id"]."'";
-            $res = mysqli_query($conn, $editt);
-            $Reedit = mysqli_fetch_array($res)
-            ?>
-            
-            <form action="" method="post">
-                <div style="opacity:0%;">.</div>
-                Name:<br>
-                    <input type="text" name = "ename" id="idName" placeholder="Enter Name" value="<?php echo $Reedit['Name'];?>"><br>
-                Comment:<br>
-                <textarea rows="10" cols="20" name = "ecomment" id="idComment" placeholder="Enter Comment"><?php echo $Reedit['Comment'];?></textarea><br>
-                Link:<br>
-                <input type="text" name = "elink" id="idLink" placeholder="Enter Link" value="<?php echo $Reedit['Link'];?>"><br><br>
-                <button type="submit" name="editBtn">Submit</button><br><br>
-                <div style="opacity:0%;">.</div>
-            </form>
-        
-        <?php
-        }else{
-        if(isset($_SESSION['dire'])){
-    if($_SESSION['dire'] == "View"){
-        ?>
-        <table width="600" border="1">
-              <tr>
-                <th width="100"> <div align="center">Name</div></th>
-                <th width="350"> <div align="center">Comment </div></th>
-                <th width="150"> <div align="center">Link </div></th>
-                <th width="150"> <div align="center">Action </div></th>
-              </tr>
-            <?php
-            $res = mysqli_query($conn, 'SELECT * FROM guestbook');
-            while($Result = mysqli_fetch_array($res))
-            {
-            ?>
-              <tr>
-                    <td><?php echo $Result['name'];?></div></td>
-                    <td><?php echo $Result['comment'];?></td>
-                    <td><?php echo $Result['Link'];?></td>
-                    <td>
-                        <form  action="" method="post">
-                            <button type="submit" name="edit" value="<?php echo $Result['ID'];?>">แก้ไข</button>
-                            <button type="submit" name="del" value="<?php echo $Result['ID'];?>">ลบออก</button>
-                        </form>
-                    </td>
-              </tr>
-            <?php
-            }
-            ?>
+<div class="container">
+    <div align="center"><h1>DataBase Table</h1></div>
+    <table width="400" border="1">
+        <table class="table table-dark table-striped table-bordered">
+            <thead>
+                <tr>
+                    <th width="100"> <div align="center">Name</div></th>
+                    <th width="300"> <div align="center">Comment</div></th>
+                    <th width="150"> <div align="center">Link</div></th>
+                    <th width="10%"> <div align="center">Edit</div></th>
+                    <th width="10%"> <div align="center">Delete</div></th>
+                </tr>
+            </thead>
+    <?php
+        while($Result = mysqli_fetch_array($res))
+        {
+?>
+  <tr>
+    <td><?php echo $Result['name'];?></div></td>
+    <td><?php echo $Result['comment'];?></td>
+    <td><?php echo $Result['Link'];?></td>
+    <td><div align="center">
+            <form action="edit_form.php" method="post">
+                <input type="hidden" name="ID" value=<?php echo $Result['ID'];?>>
+                <button type="submit" class="btn btn-light">แก้ไข</button></form></div>
+    </td>
+    <td><div align="center">
+            <form action="delete.php" method="post">
+                <input type="hidden" name="ID" value=<?php echo $Result['ID'];?>>
+                <button type="submit" class="btn btn-light">ลบ</button></form></div>
+    </td>
+  </tr>
+<?php
+}
+?>
 </table>
-<?php
-    }
-mysqli_close($conn);
-?>
-<form action="form.html" method="POST"
+<div class="container">
+    <form action="form.html" method="POST"
     <p>
-        <input type="submit" name="submit" value="เพิ่ม">
+        <div align="center"><input type="submit" name="submit" value="เพิ่ม"></div>
     </p>
-</form>
+    </form>
+</div>
 <?php
-}
-?>
-<?php
-}
+mysqli_close($conn);
 ?>
 </body>
 </html>
