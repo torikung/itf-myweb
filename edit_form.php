@@ -23,15 +23,15 @@ if (mysqli_connect_errno($conn))
     die('Failed to connect to MySQL: '.mysqli_connect_error());
 }
     
-$ID = $_POST['ID'];
-$sql = "SELECT * FROM guestbook WHERE ID='$ID'";
+$ID = $_POST['id'];
+$sql = "SELECT * FROM guestbook WHERE id='$ID'";
 $res = mysqli_query($conn, $sql);
 $comment = mysqli_fetch_array($res);
 ?>
 <form action="edit.php" method="post" class="mt-4">
     <div class="container">
         <div align="center"><h1>Edit comment</h1></div>
-            <input type="hidden" name="ID" value=<?php echo $comment['ID'];?>>
+            <input type="hidden" name="ID" value=<?php echo $comment['id'];?>>
             <div class="form-group row">
     		<label for="inputName" class="col-sm-2 col-form-label">Name</label>
     		<div class="col-sm-10", "form">
