@@ -1,4 +1,4 @@
-<?php
+<html>
 <head>
     <style>
         body { 
@@ -36,4 +36,4 @@ if (mysqli_query($conn, $sql)) {
 echo '<META HTTP-EQUIV=REFRESH CONTENT="1; '.$url.'">';
 
 mysqli_close($conn);
-?>
+</html>
