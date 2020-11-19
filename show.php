@@ -63,6 +63,7 @@ if (mysqli_connect_errno($conn))
             ?>
 </table>
 <?php
+    }
 mysqli_close($conn);
 ?>
 <form action="form.html" method="POST"
@@ -70,7 +71,11 @@ mysqli_close($conn);
         <input type="submit" name="submit" value="เพิ่ม">
     </p>
 </form>
+<?php
 }
+?>
+<?php
 }
+?>
 </body>
 </html>
