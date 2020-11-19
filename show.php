@@ -18,15 +18,15 @@ if (mysqli_connect_errno($conn))
             $Reedit = mysqli_fetch_array($res)
             ?>
             
-            <form class="form" action="" method="post">
+            <form action="" method="post">
                 <div style="opacity:0%;">.</div>
                 Name:<br>
-                    <input class="in" type="text" name = "ename" id="idName" placeholder="Enter Name" value="<?php echo $Reedit['Name'];?>"><br>
+                    <input type="text" name = "ename" id="idName" placeholder="Enter Name" value="<?php echo $Reedit['Name'];?>"><br>
                 Comment:<br>
-                <textarea class="in"rows="10" cols="20" name = "ecomment" id="idComment" placeholder="Enter Comment"><?php echo $Reedit['Comment'];?></textarea><br>
+                <textarea rows="10" cols="20" name = "ecomment" id="idComment" placeholder="Enter Comment"><?php echo $Reedit['Comment'];?></textarea><br>
                 Link:<br>
-                <input class="in" type="text" name = "elink" id="idLink" placeholder="Enter Link" value="<?php echo $Reedit['Link'];?>"><br><br>
-                <button class="btn" type="submit" name="editBtn">Submit</button><br><br>
+                <input type="text" name = "elink" id="idLink" placeholder="Enter Link" value="<?php echo $Reedit['Link'];?>"><br><br>
+                <button type="submit" name="editBtn">Submit</button><br><br>
                 <div style="opacity:0%;">.</div>
             </form>
         
@@ -53,8 +53,8 @@ if (mysqli_connect_errno($conn))
                     <td><?php echo $Result['Link'];?></td>
                     <td>
                         <form  action="" method="post">
-                            <button class="edit" type="submit" name="edit" value="<?php echo $Result['ID'];?>">แก้ไข</button>
-                            <button class="del" type="submit" name="del" value="<?php echo $Result['ID'];?>">ลบออก</button>
+                            <button type="submit" name="edit" value="<?php echo $Result['ID'];?>">แก้ไข</button>
+                            <button type="submit" name="del" value="<?php echo $Result['ID'];?>">ลบออก</button>
                         </form>
                     </td>
               </tr>
