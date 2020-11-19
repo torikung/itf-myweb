@@ -19,16 +19,16 @@
     $res = mysqli_query($conn, 'SELECT * FROM guestbook');
 ?>
 <div class="container">
-    <div align="center"><h1>DataBase Table</h1></div>
+    <div align="center" class="text-primary"><h1>DataBase Table</h1></div>
     <table width="400" border="1">
         <table class="table table-dark table-striped table-bordered">
             <thead>
                 <tr>
-                    <th width="100"> <div align="center">Name</div></th>
-                    <th width="300"> <div align="center">Comment</div></th>
-                    <th width="150"> <div align="center">Link</div></th>
-                    <th width="10%"> <div align="center">Edit</div></th>
-                    <th width="10%"> <div align="center">Delete</div></th>
+                    <th width="100"> <div align="center" class="text-secondary">Name</div></th>
+                    <th width="300"> <div align="center" class="text-secondary">Comment</div></th>
+                    <th width="150"> <div align="center" class="text-secondary">Link</div></th>
+                    <th width="10%"> <div align="center" class="text-secondary">Edit</div></th>
+                    <th width="10%"> <div align="center" class="text-secondary">Delete</div></th>
                 </tr>
             </thead>
     <?php
