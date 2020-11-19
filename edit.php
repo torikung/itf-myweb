@@ -11,7 +11,7 @@ $ID = $_POST['ID'];
 $name = $_POST['name'];
 $text = $_POST['comment'];
 $link = $_POST['link'];
-$sql = "UPDATE guestbook SET Name='$name', Comment='$text', Link='$link' WHERE ID='$ID'";
+$sql = "UPDATE guestbook SET name='$name', comment='$text', link='$link' WHERE ID='$ID'";
 
 if (mysqli_query($conn, $sql)) {
     echo "Record Update Successfully";
