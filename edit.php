@@ -18,6 +18,8 @@ if (mysqli_query($conn, $sql)) {
   } else {
     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
   }
-  
+
+echo '<META HTTP-EQUIV=REFRESH CONTENT="1; '.$url.'">';
+
 mysqli_close($conn);
 ?>
