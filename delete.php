@@ -9,6 +9,7 @@ if (mysqli_connect_errno($conn))
 
 $id = $_POST['id'];
 $sql = "DELETE FROM guestbook WHERE id='$id'";
+$url='/show.php';
 
 if (mysqli_query($conn, $sql)) {
     echo "Record deleted successfully";
@@ -16,9 +17,7 @@ if (mysqli_query($conn, $sql)) {
     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
   }
 
-<?php
-<meta http-equiv="refresh" content="3;window.location.href='/show.php">;
-?>
-  
+echo '<META HTTP-EQUIV=REFRESH CONTENT="1; '.$url.'">';
+
 mysqli_close($conn);
 ?>
