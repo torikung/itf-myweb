@@ -19,16 +19,16 @@ if (mysqli_connect_errno($conn))
 $res = mysqli_query($conn, 'SELECT * FROM guestbook');
 ?>
 <div class="container">
-    <div align="center"><h1>DataBase Table</h1></div>
+    <div align="center" class="text-primary"><h1>DataBase Table</h1></div>
     <table width="400" border="1">
-        <table class="table table-dark table-striped table-bordered">
+        <table class="table table-sm table-dark table-striped table-bordered">
             <thead>
                 <tr>
-                    <th width="100"> <div align="center">Name</div></th>
-                    <th width="300"> <div align="center">Comment</div></th>
-                    <th width="150"> <div align="center">Link</div></th>
-                    <th width="10%"> <div align="center">Edit</div></th>
-                    <th width="10%"> <div align="center">Delete</div></th>
+                    <th width="100"> <div align="center" class="p-3 mb-2 bg-primary text-white">Name</div></th>
+                    <th width="300"> <div align="center" class="p-3 mb-2 bg-primary text-white">Comment</div></th>
+                    <th width="150"> <div align="center" class="p-3 mb-2 bg-primary text-white">Link</div></th>
+                    <th width="10%"> <div align="center" class="p-3 mb-2 bg-primary text-white">Edit</div></th>
+                    <th width="10%"> <div align="center" class="p-3 mb-2 bg-primary text-white">Delete</div></th>
                 </tr>
             </thead>
     <?php
