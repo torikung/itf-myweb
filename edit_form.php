@@ -40,24 +40,24 @@ $comment = mysqli_fetch_array($res);
         <div align="center" class="text-danger"><h1>Edit comment</h1></div>
             <input type="hidden" name="id" value=<?php echo $comment['id'];?>>
             <div class="form-group row">
-    		<label for="inputName" class="col-sm-2 col-form-label">Name</label>
+    		<label for="inputName" class="col-sm-2 col-form-label text-danger">Name</label>
     		<div class="col-sm-10", "form">
                 	<?php
-                    		echo '<input type="text" name="name" id="inputName" class="form-control text-danger" placeholder="Enter Name" value="'.$comment["name"].'">'
+                    		echo '<input type="text" name="name" id="inputName" class="form-control" placeholder="Enter Name" value="'.$comment["name"].'">'
                 	?>
 		</div>
 	    </div>
             <div class="form-group row">
-    		<label for="inputComment" class="col-sm-2 col-form-label">Comment</label>
+    		<label for="inputComment" class="col-sm-2 col-form-label text-danger">Comment</label>
     		<div class="col-sm-10", "form">
-                	<textarea name="comment" class="form-control text-danger" id="inputComment" row="3" placeholder="Enter Comment"><?php echo $comment['comment'];?></textarea>
+                	<textarea name="comment" class="form-control" id="inputComment" row="3" placeholder="Enter Comment"><?php echo $comment['comment'];?></textarea>
 		</div>
             </div>
             <div class="form-group row">
-                <label for="inputComment" class="col-sm-2 col-form-label">Link</label>
+                <label for="inputComment" class="col-sm-2 col-form-label text-danger">Link</label>
                 <div class="col-sm-10", "form">
                 	<?php
-                    		echo '<input type="text" name="link" id="inputLink" class="form-control text-danger" placeholder="Enter Link" value="'.$comment["link"].'">'
+                    		echo '<input type="text" name="link" id="inputLink" class="form-control" placeholder="Enter Link" value="'.$comment["link"].'">'
                 	?>
 		</div>
             </div>
