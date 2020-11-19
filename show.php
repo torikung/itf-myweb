@@ -9,12 +9,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <style>
         body {
-            background: url("https://wallpaperaccess.com/full/31367.jpg");
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-attachment: fixed;
-            margin: 5%;
-            color:white;
+            background-image: url("https://wallpaperaccess.com/full/31367.jpg");
         }
 </head>
 <body>
