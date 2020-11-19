@@ -8,7 +8,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <style>
-        .formbg { 
+        body { 
             background-color: white; 
             background-image: url('https://wallpaperaccess.com/full/31367.jpg'); 
             background-size: auto; 
@@ -17,7 +17,7 @@
         } 
     </style>
 </head>
-<body class=”formbg”> 
+<body> 
 <?php
     $conn = mysqli_init();
     mysqli_real_connect($conn, 'itfdatabest.mysql.database.azure.com', 'torikung@itfdatabest', 'itf5544!', 'itflab', 3306);
