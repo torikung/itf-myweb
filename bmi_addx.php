@@ -13,7 +13,7 @@ $comment = $_POST['weight'];
 $link = $_POST['height'];
 
 
-$sql = "INSERT INTO guestbook (Name , Weight , Height) VALUES ('$name', '$comment', '$link')";
+$sql = "INSERT INTO guestbook (Name , Comment , Link) VALUES ('$name', '$comment', '$link')";
 
 echo $sql;
 
