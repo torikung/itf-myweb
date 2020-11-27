@@ -19,7 +19,7 @@
 	</style>
 </head>
 <body>
-  	<form action = "bmi_addx" method = "post" id="CommentForm" >
+  	<form action = "bmi_addx.php" method = "post" id="CommentForm" >
 		<div class="container">
 			<div align="center" class="text-danger"><h1>กรอกชื่อ, น้ำหนัก และส่วนสูงของท่าน</h1></div>
 				<div class="form-group row">
