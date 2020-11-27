@@ -9,11 +9,11 @@ if (mysqli_connect_errno($conn))
 
 
 $name = $_POST['name'];
-$comment = $_POST['weight'];
-$link = $_POST['height'];
+$weight = $_POST['weight'];
+$height = $_POST['height'];
 
 
-$sql = "INSERT INTO finaltest (Name , Weight , Height) VALUES ('$name', '$comment', '$link')";
+$sql = "INSERT INTO finaltest (Name , Weight , Height) VALUES ('$name', '$weight', '$height')";
 
 echo $sql;
 
