@@ -12,7 +12,7 @@ $name = $_POST['name'];
 $text = $_POST['weight'];
 $link = $_POST['height'];
 $sql = "UPDATE guestbook SET name='$name', weight='$text', height='$height' WHERE Id='$Id'";
-$url='/show.php';
+$url='/bmi_show.php';
 
 if (mysqli_query($conn, $sql)) {
     echo "Record Update Successfully";
