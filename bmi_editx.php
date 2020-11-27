@@ -7,12 +7,12 @@ if (mysqli_connect_errno($conn))
     die('Failed to connect to MySQL: '.mysqli_connect_error());
 }
 
-$Id = $_POST['Id'];
 $name = $_POST['name'];
-$text = $_POST['weight'];
-$link = $_POST['height'];
-$sql = "UPDATE guestbook SET name='$name', weight='$text', height='$height' WHERE Id='$Id'";
+$weight = $_POST['weight'];
+$height = $_POST['height'];
 $url='/bmi_show.php';
+
+$sql = "UPDATE finaltest SET name='$name', weight='$weight', height='$height' WHERE Id='$Id'";
 
 if (mysqli_query($conn, $sql)) {
     echo "Record Update Successfully";
