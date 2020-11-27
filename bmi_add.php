@@ -37,7 +37,7 @@
     				<div class="form-group row">
     					<label for="inputHeight" class="col-sm-2 col-form-label text-light">height</label>
     					<div class="col-sm-10">
-      						<input type="float" name = "height" class="form-control" id="idHeight" placeholder="Enter height">
+      						<input type="float" name = "height" class="form-control" id="inputWeight" placeholder="Enter height">
     					</div>
   				</div>
 			</div>
