@@ -35,7 +35,7 @@ $sql = "SELECT * FROM guestbook WHERE id='$Id'";
 $res = mysqli_query($conn, $sql);
 $comment = mysqli_fetch_array($res);
 ?>
-<form action="edit.php" method="post" class="mt-4">
+<form action="bmi_editx.php" method="post" class="mt-4">
     <div class="container">
         <div align="center" class="text-danger"><h1>Edit comment</h1></div>
             <input type="hidden" name="id" value=<?php echo $comment['Id'];?>>
