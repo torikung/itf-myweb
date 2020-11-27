@@ -11,7 +11,6 @@ if (mysqli_connect_errno($conn))
 $name = $_POST['name'];
 $comment = $_POST['weight'];
 $link = $_POST['height'];
-$url='/bmi_show.php';
 
 
 $sql = "INSERT INTO guestbook (Name , Weight , Height) VALUES ('$name', '$comment', '$link')";
@@ -22,8 +21,6 @@ if (mysqli_query($conn, $sql)) {
   } else {
     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
   }
-
-echo '<META HTTP-EQUIV=REFRESH CONTENT="1; '.$url.'">';
 
 mysqli_close($conn);
 ?>
