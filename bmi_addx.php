@@ -9,12 +9,12 @@ if (mysqli_connect_errno($conn))
 
 
 $name = $_POST['name'];
-$weight = $_POST['weight'];
-$height = $_POST['height'];
+$comment = $_POST['weight'];
+$link = $_POST['height'];
 $url='/bmi_show.php';
 
 
-$sql = "INSERT INTO guestbook (ชื่อ , น้ำหนัก , ส่วนสูง) VALUES ('$name', '$weight', '$height')";
+$sql = "INSERT INTO guestbook (Name , Comment , Link) VALUES ('$name', '$comment', '$link')";
 
 
 if (mysqli_query($conn, $sql)) {
