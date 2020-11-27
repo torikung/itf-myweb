@@ -21,23 +21,23 @@
 <body>
   	<form action = "bmi_addx.php" method = "post" id="CommentForm" >
 		<div class="container">
-			<div align="center" class="text-danger"><h1>กรอกชื่อ, น้ำหนัก และส่วนสูงของท่าน</h1></div>
+			<div align="center" class="text-danger"><h1>Insert Form</h1></div>
 				<div class="form-group row">
-    					<label for="inputName" class="col-sm-2 col-form-label text-light">Name</label>
+    					<label for="inputName" class="col-sm-2 col-form-label text-light">name</label>
     					<div class="col-sm-10">
       						<input type="text" name = "name" class="form-control" id="inputName" placeholder="Enter Name">
     					</div>
   				</div>
     				<div class="form-group row">
-    					<label for="inputComment" class="col-sm-2 col-form-label text-light">Weight</label>
+    					<label for="inputComment" class="col-sm-2 col-form-label text-light">weight</label>
     					<div class="col-sm-10">
-      						<input type="comment" name = "weight" class="form-control" id="inputComment" placeholder="Enter Weight">
+      						<input type="float" name = "weight" class="form-control" id="inputComment" placeholder="Enter weight">
     					</div>
   				</div>
     				<div class="form-group row">
-    					<label for="inputComment" class="col-sm-2 col-form-label text-light">Height</label>
+    					<label for="inputComment" class="col-sm-2 col-form-label text-light">height</label>
     					<div class="col-sm-10">
-      						<input type="text" name = "height" class="form-control" id="idLink" placeholder="Enter Height">
+      						<input type="float" name = "height" class="form-control" id="idLink" placeholder="Enter height">
     					</div>
   				</div>
 			</div>
