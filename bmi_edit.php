@@ -31,7 +31,7 @@ if (mysqli_connect_errno($conn))
 }
     
 $id = $_POST['Id'];
-$sql = "SELECT * FROM guestbook WHERE id='$Id'";
+$sql = "SELECT * FROM finaltest WHERE id='$Id'";
 $res = mysqli_query($conn, $sql);
 $comment = mysqli_fetch_array($res);
 ?>
