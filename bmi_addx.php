@@ -11,11 +11,10 @@ if (mysqli_connect_errno($conn))
 $name = $_POST['name'];
 $weight = $_POST['weight'];
 $height = $_POST['height'];
+$url='/bmi_show.php';
 
 
 $sql = "INSERT INTO finaltest (Name , Weight , Height) VALUES ('$name', '$weight', '$height')";
-
-echo $sql;
 
 if (mysqli_query($conn, $sql)) {
     echo "New record created successfully";
@@ -23,6 +22,7 @@ if (mysqli_query($conn, $sql)) {
     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
   }
 
+echo '<META HTTP-EQUIV=REFRESH CONTENT="2; '.$url.'">';
 
 mysqli_close($conn);
 ?>
