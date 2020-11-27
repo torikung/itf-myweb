@@ -14,7 +14,7 @@ $height = $_POST['height'];
 $url='/bmi_show.php';
 
 
-$sql = "INSERT INTO guestbook (name , weight , height) VALUES ('$name', '$weight', '$height')";
+$sql = "INSERT INTO guestbook (Name , Weight , Height) VALUES ('$name', '$weight', '$height')";
 
 
 if (mysqli_query($conn, $sql)) {
