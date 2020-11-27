@@ -15,12 +15,14 @@ $link = $_POST['height'];
 
 $sql = "INSERT INTO guestbook (Name , Weight , Height) VALUES ('$name', '$comment', '$link')";
 
+echo $sql;
 
 if (mysqli_query($conn, $sql)) {
     echo "New record created successfully";
   } else {
     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
   }
+
 
 mysqli_close($conn);
 ?>
